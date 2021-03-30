@@ -37,7 +37,7 @@ module ActiveAdmin
 
         results = records.map do |record|
           {
-            id: record.id,
+            id: record.id.to_s,
             text: display_text(record)
           }.merge(hash_of_additional_payload(record) || {})
         end
